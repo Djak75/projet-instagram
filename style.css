@@ -1,24 +1,27 @@
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-
+    margin: 0;
+}
+  
   body {
     font-family: 'Arial', sans-serif;
-    padding: 0 8%;
+    font-family: roboto ;
   }
+
+  main, header {
+    padding: 0 7%;
+
+  }
+  /* HEADER */
 
   header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    
    
   }
-
-
 
   nav {
     display: flex;
@@ -70,5 +73,25 @@
   .create-btn:hover {
     opacity: 0.9;
   }
+/* MAIN */
+
+
 
 /* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1E2A37;
+    color: #FFFFFF;
+    width: 100%;
+    margin: 0 0;
+    
+}
+
+.policeFooter {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+
