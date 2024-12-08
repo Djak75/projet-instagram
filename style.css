@@ -6,6 +6,10 @@
   body {
     font-family: 'Arial', sans-serif;
     font-family: roboto ;
+    background-color: #F6F8FA;
+    width: 100%;
+    max-width: 600;
+    height: 120vh;
   }
 
   main, header {
@@ -76,10 +80,56 @@
 
 /* MAIN */
 
+.contenair {
+  width: 275px;
+  height: 599px;
+  text-align: center;
+  background-color: white;
+}
+
+.alignHori {
+  display: flex;
+  justify-content: space-around;
+}
+
+.alignTitre {
+  display: flex;
+  justify-content: center;
+}
+
+
+.paraGauche {
+  text-align: left;
+
+}
+
+.titreProfil {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.alignImane {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.iconeStories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+}
+
+h2 {
+  padding-top: 30px;
+}
+
 
 
 /* FOOTER */
 footer {
+    max-width: 600;
     display: flex;
     justify-content: space-between;
     background-color: #1E2A37;
