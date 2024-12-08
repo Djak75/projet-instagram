@@ -39,7 +39,9 @@
   }
 
   nav a:hover {
-    color: pink;
+    background: linear-gradient(#8C3AAA, #DB3B75, #F28F3D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
 .gras {
@@ -82,9 +84,7 @@ footer {
     justify-content: space-between;
     background-color: #1E2A37;
     color: #FFFFFF;
-    padding: 2% 7%;
-   
-    
+    padding: 2% 8%;   
 }
 
 .policeFooter {
