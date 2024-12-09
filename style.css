@@ -1,15 +1,13 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
   
   body {
     font-family: 'Arial', sans-serif;
     font-family: roboto ;
     background-color: #F6F8FA;
-    width: 100%;
-    max-width: 600;
-    height: 120vh;
   }
 
   main, header {
@@ -18,21 +16,40 @@
   }
   /* HEADER */
 
-  header {
+  .headerContenair {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-top: 25px;
+    max-width: 1400px;
+   
   }
 
   .logo {
     cursor: pointer;
+    content: url('Images/Page 1/Header/header-icone-logo-insta.png');
+    transition: 0.3s; 
+  }
+
+  .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
   }
 
   nav {
     display: flex;
     gap: 40px;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: #262626;
   }
 
   nav a {
@@ -76,6 +93,71 @@
     display: flex;
     justify-content: space-between;
 }
+
+.menuBurger {
+  display: none; 
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menuBurger span {
+  background-color: #262626;
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+  header {
+    background-color: #1E2A37;
+    color: white;
+    padding-bottom: 15px;
+  }
+  .menuBurger {
+    display: flex;
+  }
+
+  .menuBurger span {
+    background-color: white;
+  }
+
+  .logo {
+    content: url('Images/Page 1/Header/logo blanc.png');
+  }  
+
+  .iconeRecherche {
+    display: none;
+  }
+
+  .iconeAjout {
+    display: none;
+  }
+  .nav-menu {
+    display: none; /* Cache le menu par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex; /* Affiche le menu lorsqu'il est actif */
+  }
+
+  .iconeRecherche, .iconeAjout {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+
 
 
 /* MAIN */
@@ -129,15 +211,33 @@ h2 {
 
 /* FOOTER */
 footer {
-    max-width: 600;
-    display: flex;
-    justify-content: space-between;
     background-color: #1E2A37;
     color: #FFFFFF;
-    padding: 2% 8%;   
+    padding: 2% 8%; 
+    text-align: center;
+}
+
+.footerContenair{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1400;
+  flex-wrap: wrap;
+      
 }
 
 .policeFooter {
     font-size: 22px;
     font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footerContenair {
+    flex-direction: column; 
+    text-align: center; 
+    gap: 10px; 
+  }
 }

@@ -12,23 +12,43 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
-   
+<header>
+
+   <div class="headerContenair">
+    <div>
     <img class="logo" src="Images/Page 1/Header/header-icone-logo-insta.png" alt="logo instagram">
-    <nav>
-      <a href="index.html" class="gras">Accueil</a>
-      <a href="#">Découvrir</a>
-      <a href="#">Reels</a>
-      <a href="#">Messages</a>
-      <a href="#">Notifications</a>
-      <a href="#">Stories</a>
-      <a href="profil.html">Profil</a>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+      <li><a href="index.html" class="gras">Accueil</a></li>
+      <li><a href="#">Découvrir</a></li>
+      <li><a href="#">Reels</a></li>
+      <li><a href="#">Messages</a></li>
+      <li><a href="#">Notifications</a></li>
+      <li><a href="#">Stories</a></li>
+      <li><a href="profil.html">Profil</a></li>
+        </ul>
     </nav>
 
     <img class="iconeRecherche" src="Images/Page 1/Header/header-icone-recherche.png" alt="logo recherche">
+      <button class="iconeAjout alignIcone"><img src="Images/Page 1/Header/header-icone-ajout.png" alt="icone ajout"><p>Créer</p></button>
+   
+    <div class="menuBurger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
 
-    <button class="iconeAjout alignIcone"><img src="Images/Page 1/Header/header-icone-ajout.png" alt="icone ajout"><p>Créer</p></button>
-     
+<script>
+    const menuBurger = document.querySelector('.menuBurger');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    menuBurger.addEventListener('click', () => {
+      navMenu.classList.toggle('active'); // Ajoute ou enlève la classe "active"
+    });
+  </script>
+
   </header>
 <br><br>
 
@@ -39,10 +59,12 @@
 <br><br>
 <!-- FOOTER -->
  <footer>
-<div>
+
+
+<div class="footerContenair">
     <p class="policeFooter">Meta verified</p>
-</div>
-<div>
+
+
     <p class="policeFooter">© 2024 Instagram par Meta</p>
 </div>
  </footer>
