@@ -42,15 +42,7 @@
     gap: 40px;
   }
 
-  nav {
-    display: flex;
-    gap: 40px;
-  }
-
-  .nav-menu a {
-    text-decoration: none;
-    color: #262626;
-  }
+ 
 
   nav a {
     text-decoration: none;
@@ -118,6 +110,21 @@
   }
   .menuBurger {
     display: flex;
+  }
+
+  .nav-menu {
+    width: 300px;
+    height: 200px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #1E2A37;
+  }
+
+  nav a {
+    color: white;
   }
 
   .menuBurger span {
