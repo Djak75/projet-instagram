@@ -4,97 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-   
-    <img class="logo" src="Images/Page 1/Header/header-icone-logo-insta.png" alt="logo instagram">
-    
-    <nav>
+  <!-- Header -->
+
+  <!-- Barre de navigation -->
+  <header class="navbar">
+    <div class="logo"><a href="index.html"></a><img src="Images/Page 1/Header/header-icone-logo-insta.png" alt="logo insta"></div>
+    <div class="burger" onclick="toggleMenu()"><img src="Images/header-icone-burger.png" alt="logo burger"></div>
+    <nav class="nav-links">
       <a href="index.html">Accueil</a>
-      <a href="#">Découvrir</a>
-      <a href="#">Reels</a>
-      <a href="#">Messages</a>
+      <a href="#">Décourvrir</a>
+      <a href="#">Réels</a>
+      <a href="#">Message</a>
       <a href="#">Notifications</a>
       <a href="#">Stories</a>
-      <a href="profil.html" class="gras">Profil</a>
+      <a href="profil.html"><b>Profil</b></a>
     </nav>
-
-    <img class="iconeRecherche" src="Images/Page 1/Header/header-icone-recherche.png" alt="logo recherche">
-
-    <button class="iconeAjout alignIcone"><img src="Images/Page 1/Header/header-icone-ajout.png" alt="icone ajout"><p>Créer</p></button>
-     
-  </header>
-<br><br>
-<!-- MAIN -->
-
- <main>
-
-  <!-- Section principal -->
-  <section class="alignImane">
-  <!-- bloc 1 -->
-  <div class="contenair">
-    <div class="imageProfil">
-      <img src="Images/Page 2/Section 1/sidebar-photo-profil.jpg" alt="photo profil">
-    </div>
-    <div>
-      <div class="alignTitre">
-        <p class="titreProfil">Jean Robinet</p>
-        <div class="iconeRegl"><img src="Images/Page 1/Header/icone-parametres.png" alt="icone reglage"></div>
-      </div>
-      <p>@jean_lebarbu</p>
-      <br>
-      <p class="paraGauche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, minima eligendi doloremque quam cumque provident tenetur nesciunt deserunt officia odit, consequatur eius.
-      </p>
-      <br>
-        <div class="alignHori">
-            <div><p class="gras">20K</p> <p>abonnées</p></div>
-            <div><p class="gras">432</p> <p>abonnement</p></div>
-            <div><p class="gras">11K</p> <p>notifs</p></div>
-        </div>
-      </div>
+    <div class="align">
+      <a href="#"><img class="iconeRecherche" src="Images/Page 1/Header/header-icone-recherche.png" alt="logo recherche"></a>
+      <a href="#"><button class="iconeAjout alignIcone"><img src="Images/Page 1/Header/header-icone-ajout.png" alt="icone ajout"><p>Créer</p></button></a>
     </div>
 
-    <!-- Bloc 2 -->
-    <div>  
-      <!-- Bloc bannière -->
-        <div>
-      <img src="Images/Page 2/Section 1/accuel-banner.jpg" alt="">
-      </div>
-
-      <h2>Stories</h2>
-
-      <!-- Bloc stories -->
-      <div class="iconeStories">
-        <img src="Images/Page 2/Stories/stories-icone-1.png" alt="">
-        <img src="Images/Page 2/Stories/stories-icone-2.png" alt="">
-        <img src="Images/Page 2/Stories/stories-icone-3.png" alt="">
-        <img src="Images/Page 2/Stories/stories-icone-4.png" alt="">
-        <img src="Images/Page 2/Stories/stories-icone-5.png" alt="">
-      </div>
-    </div>
-
-  </section>
-
-    
-<br><br><br><br><br>
- </main>
-<br><br>
-<!-- FOOTER -->
-<footer>
-  <div>
-      <p class="policeFooter">Meta verified</p>
-  </div>
-  <div>
-      <p class="policeFooter">© 2024 Instagram par Meta</p>
-  </div>
-   </footer>
+  <!-- Menu déroulant -->
+  <div class="nav-menu" id="navMenu">
+    <div class="logo"><img src="Images/Page 1/Header/logo blanc.png" alt="logo blanc"></div>
+    <span class="close-btn" onclick="closeMenu()"><img src="Images/header-icone-burger-croix.png" alt="logo fermeture"></span>
+    <img src="Images/Page 2/Section 1/sidebar-profil-icone.png" alt=""><p>Jean Robinet</p><p>@jean_lebarbu</p>
   
-  </body>
-  </html>
+    <a href="index.html">Accueil</a>
+    <a href="#">Découvrir</a>
+    <a href="#">Réels</a>
+    <a href="#">Messages</a>
+    <a href="#">Stories</a>
+    <a href="profil.html">Profil</a>
+  </div>
+
+  <!-- Ouvrir ou fermer menu -->
+  <script>
+    
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('active');
+    }
+  </script>
+
+</header>
+
+<!-- MAIN -->
+<main>
+  <br>
+  
+  <h1>Pour vous - <span>Suivi(e)</span></h1>
+  
+  <!-- <section id="s1">
+    <img class="cursor" src="Images/Page 1/Pour vous/stories-icone-1.png" alt="icone 1">
+    <img class="cursor" src="Images/Page 1/Pour vous/stories-icone-2.png" alt="icone 2">
+    <img class="cursor" src="Images/Page 1/Pour vous/stories-icone-3.png" alt="icone 3">
+    <img class="cursor none" src="Images/Page 1/Pour vous/stories-icone-4.png" alt="icone 4">
+    <img class="cursor none" src="Images/Page 1/Pour vous/stories-icone-5.png" alt="icone 5">
+    <img class="cursor none" src="Images/Page 1/Pour vous/stories-icone-6.png" alt="icone 6">
+    <img class="cursor none" src="Images/Page 1/Pour vous/stories-icone-7.png" alt="icone7">
+  </section> -->
+</main>
+
+<br><br>
+
+<!-- FOOTER -->
+<footer class="foot">
+<div class="footerContenair">
+   <p class="policeFooter">Meta verified</p>
+
+   <p class="policeFooter">© 2024 Instagram par Meta</p>
+</div>
+</footer>
+  
+</body>
+</html>
