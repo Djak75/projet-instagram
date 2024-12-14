@@ -132,6 +132,8 @@ transition: color 0.3s;
 
 .nav-menu a:hover {
 background: linear-gradient(#8C3AAA, #DB3B75, #F28F3D);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 /* Bouton de fermeture */
@@ -149,7 +151,7 @@ display: block; /* Affiché lorsque le menu est ouvert */
 
 
 /* Responsive */
-@media (max-width: 1156px) {
+@media (max-width: 900px) {
 .burger {
   display: block; /* Affiche le menu burger */
 }
@@ -206,7 +208,7 @@ justify-content: space-between;
 }
 
 /* Responsive */
-@media (max-width: 1156px) {
+@media (max-width: 900px) {
 .recherche-responsive {
   display: flex;
   padding: 15px 0;
@@ -296,7 +298,7 @@ main {
   line-height: 4;
 }
 
-@media (max-width: 1156px) {
+@media (max-width: 900px) {
 .img-5 {
   display: none;
 }
