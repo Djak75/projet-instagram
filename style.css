@@ -375,17 +375,21 @@ main {
   text-align: center;
   width: 275px;
   height: 499px;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
 }
 
 .photo_profil{
   background-image: url("Images/Page 2/Section 1/sidebar-photo-profil copie.png");
   background-repeat: no-repeat;
   object-fit: cover;
-  height: 275px;
-  width: 300px;
+  height: 300px;
+  width: 275px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
 }
-
-/* Imâne : Déplacer icône jean  */
 
 .icone_jean{
   height: 64px;
@@ -465,6 +469,14 @@ main {
 .img_5{
   grid-template-columns: 3/4;
   grid-template-rows: 3/4;
+}
+
+/* Imâne : Grid Final */
+
+.grid_final{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 
