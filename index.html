@@ -43,23 +43,20 @@
     <a href="profil.html">Profil</a>
   </div>
 
-  <!-- Ouvrir ou fermer menu -->
-  <script>
-    
-    function toggleMenu() {
-      const navMenu = document.getElementById('navMenu');
-      navMenu.classList.toggle('active');
-    }
-
-    function closeMenu() {
-      document.getElementById('navMenu').classList.remove('active');
-    }
-  </script>
-
 </header>
 
 <!-- MAIN -->
 <main>
+
+  <div class="container">
+    <!-- Bouton de commutation -->
+    <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+    </label>
+</div>
+
+
   <br>
   <div class="recherche-responsive">
     <img src="Images/searchbar.png" alt="barre recherche">
@@ -119,28 +116,28 @@
 
   <div class="img-5">
 
-    <div class="align-icone">
+    <div class="align-link">
     <img src="Images/Page 1/Suggestions/actu-icone-1.png" alt="icone1">
     <p>@bobo_poils</p>
-    <p><a href="#">suivre</a></p>
+    <p><a href="#">Suivre</a></p>
     </div>
 
-    <div class="align-icone">
+    <div class="align-link">
       <img src="Images/Page 1/Suggestions/actu-icone-2.png" alt="icone2">
       <p>@Cheveululu</p>
-      <p><a href="#">suivre</a></p>
+      <p><a href="#">Suivre</a></p>
       </div>
 
-      <div class="align-icone">
+      <div class="align-link">
         <img src="Images/Page 1/Suggestions/actu-icone-3.png" alt="icone3">
         <p>@lulunettes</p>
-        <p><a href="#">suivre</a></p>
+        <p><a href="#">Suivre</a></p>
         </div>
 
-        <div class="align-icone">
+        <div class="align-link">
           <img src="Images/Page 1/Suggestions/actu-icone-4.png" alt="icone4">
           <p>@barbapapa</p>
-          <p><a href="#">suivre</a></p>
+          <p><a href="#">Suivre</a></p>
           </div>
 
   </div>
@@ -163,5 +160,7 @@
 </div>
 </footer>
   
+<script src="script.js"></script>
+
 </body>
 </html>
