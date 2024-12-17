@@ -439,6 +439,7 @@ main {
 
 .photo_profil{
   background-image: url("Images/Page 2/Section 1/sidebar-photo-profil copie.png");
+  background-repeat: no-repeat;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
