@@ -19,14 +19,24 @@
     
     <nav class="navbar">
       <div class="logo"><img id="log" src="Images/Page 1/Header/header-icone-logo-insta.png" alt="logo insta"></div>
-      <div class="nav-links"><a href="#">Décourvrir</a>
+      <div class="nav-links">
+      <a href="index.html"><b>Accueil</b></a>
+      <a href="#">Décourvrir</a>
       <a href="#">Réels</a>
       <a href="#">Message</a>
       <a href="#">Notifications</a>
       <a href="#">Stories</a>
       <a href="profil.html">Profil</a>
-      <a href="#"><img class="iconeRecherche" src="Images/Page 1/Header/header-icone-recherche.png" alt="logo recherche"></a>
-      <a href="#"><button class="iconeAjout alignIcone"><img src="Images/Page 1/Header/header-icone-ajout.png" alt="icone ajout"><p>Créer</p></button></a></div>
+      <div class="search-container">
+        <!-- Icône cliquable -->
+        <div class="search-icon" id="search-icon">
+            <img src="Images/Page 1/Header/header-icone-recherche.png" alt="Loupe">
+        </div>
+        <!-- Barre de recherche cachée initialement -->
+        <input type="text" placeholder="Rechercher..." class="search-bar" id="search-bar">
+    </div>
+      <button class="iconeAjout alignIcone"><img src="Images/Page 1/Header/header-icone-ajout.png" alt="icone ajout"><p>Créer</p></button>
+    </div>
       <div class="burger" onclick="toggleMenu()"><img src="Images/header-icone-burger.png" alt="logo burger"></div>
     </nav>
 
@@ -59,9 +69,13 @@
 
   <br>
   <div class="recherche-responsive">
-    <img src="Images/searchbar.png" alt="barre recherche">
-    <img src="Images/btn.png" alt="bouton">
-
+    <div class="search-container-respon">
+      <input type="text" placeholder="Rechercher..." class="search-input-respon">
+      <img src="Images/Page 1/Header/header-icone-recherche.png" alt="Icône de recherche" class="search-icon-respon">
+    </div>
+      <div class="bouton-respon">
+    <button class="iconeAjout-respon alignIcone-respon"><img src="Images/Page 1/Header/header-icone-ajout.png" alt="icone ajout"><p>Créer</p></button>
+     </div>
 
   </div>
   <!-- Section 1 -->

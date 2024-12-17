@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 
-
 /* Body */
 body {
 background-color: #F6F8FA;
 font-family: roboto;
 color:#1E2A37;
+}
+
+img {
+  max-width: 100%;
 }
 
 main {
@@ -31,7 +34,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 z-index: 10;
-gap: 50px;
+gap: 40px;
 }
 
 .logo {
@@ -45,7 +48,6 @@ transition: 0.3s;
 display: flex;
 justify-content: space-between;
 align-items: center;
-gap: 5px;
 width: 100%;
 }
 
@@ -78,11 +80,12 @@ gap: 30px;
 .align a {
 text-decoration: none;
 }
+
+/* Bouton créer */
 .iconeAjout {
-width: 120px;
-height: 7Opx;
+width: 100px;
+height: 61px;
 background: linear-gradient(to bottom left, #8C3AAA , #DB3B75, #F28F3D);
-padding: 20px;
 border-radius: 15px;
 border: none;
 color: #fff;
@@ -93,7 +96,47 @@ cursor: pointer;
 
 .alignIcone {
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #DBE5EE;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.search-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 60px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 0 20px;
+  transition: width 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 10;
+}
+
+/* Barre de recherche visible */
+.search-bar.active {
+  width: 300px;
+  opacity: 1;
+  background-color: #DBE5EE;
 }
 
 /* Menu burger caché */
@@ -155,9 +198,8 @@ display: none;
 display: block; /* Affiché lorsque le menu est ouvert */
 }
 
-
 /* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 1060px) {
 .burger {
   display: block; /* Affiche le menu burger */
 }
@@ -269,6 +311,63 @@ body.dark-mode {
   content: url('Images/header-icone-logo-insta\ darkmode.png');
 }  
 
+/* Barre de recherche responsive */
+
+.recherche-responsive {
+  display: none;
+  justify-content: space-between;
+  max-width: 1470px;
+  gap: 5%;
+  padding: 10px 0;
+  }
+
+.search-container-respon {
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  padding: 5px 10px;
+  background-color: #DBE5EE;
+  width: 65%;
+  height: 90px;
+}
+
+.bouton-respon {
+  width: 35%;
+}
+
+.iconeAjout-respon {
+  width: 100%;
+  background: linear-gradient(to bottom left, #8C3AAA , #DB3B75, #F28F3D);
+  background: linear-gradient(to bottom left, #8C3AAA , #DB3B75, #F28F3D);
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alignIcone-respon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 5%;
+}
+
+.search-icon-respon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.search-input-respon {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  background-color: #DBE5EE;
+}
 /* MAIN */
 
 h1, h2 {
@@ -286,19 +385,16 @@ font-size: 24px;
 display: flex;
 justify-content: space-between;
 padding: 10px 0;
+width: 100%;
+max-width: 1470px;
 }
 
 .cursor {
 cursor: pointer;
 }
 
-.recherche-responsive {
-display: none;
-justify-content: space-between;
-}
-
-/* Responsive */
-@media (max-width: 1000px) {
+/* Responsive 1*/
+@media (max-width: 1060px) {
 .recherche-responsive {
   display: flex;
   padding: 15px 0;
@@ -321,11 +417,9 @@ main {
 }
 
 #s1 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
+
 
 .dark-mode header {
   background-color: #242424;
@@ -339,6 +433,9 @@ main {
   content: url('Images/Page 1/Header/logo blanc.png');
 }  
 
+.recherche-responsive {
+  display: flex;
+}
 }
 
 #s2 {
@@ -353,6 +450,7 @@ main {
   grid-column: 1/2;
   grid-row: 1/2;
 }
+
 
 .img-2 {
   grid-column: 2/3;
@@ -372,7 +470,6 @@ main {
 .img-5 {
   grid-column: 4/-1;
   grid-row: 1/2;
-  padding: 20px; 
 }
 
 .taille-100 {
@@ -409,7 +506,8 @@ main {
   color: #2C66D9;
 }
 
-@media (max-width: 1000px) {
+/* Responsive 1 */
+@media (max-width: 1060px) {
 .img-5 {
   display: none;
 }
@@ -420,19 +518,39 @@ main {
 }
 }
 
-@media (max-width: 650px) {
+/* Responsive 2 */
+@media (max-width: 700px) {
+  #s2 {
+    flex-wrap: wrap;
+  }
+
+  .none1 {
+    display: none;
+  }
+}
+
+/* Responsive 3 */
+@media (max-width: 570px) {
   #s2 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
 
   .taille-100 {
-    max-width: 600px;
-    min-height: 700px;
-    max-height: 800px;
-    object-fit: cover;
+    max-width: 474px;
+    min-height: 533px;
+    max-height: 533px;
+    
     border-radius: 20px;
+  }
+
+  .img-3 {
+    border: 4px solid red;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -459,8 +577,8 @@ font-weight: 500;
 margin: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 650px) {
+/* Responsive 2 */
+@media (max-width: 700px) {
 .footerContenair {
 flex-direction: column; 
 text-align: center; 

@@ -31,3 +31,38 @@ themeToggle.addEventListener('change', () => {
         localStorage.setItem('darkMode', 'disabled'); // Enregistrer le mode clair
     }
 });
+
+
+
+
+
+
+
+
+
+
+// script.js
+const searchIcon = document.getElementById('search-icon');
+const searchBar = document.getElementById('search-bar');
+const searchContainer = document.getElementById('search-container');
+
+// Ouvrir la barre quand on clique sur l'icône
+searchIcon.addEventListener('click', (e) => {
+    e.stopPropagation(); // Empêche le clic de se propager
+    searchBar.classList.add('active');
+    searchBar.focus(); // Met le focus directement sur l'input
+});
+
+// Fermer la barre quand on clique ailleurs
+document.addEventListener('click', (e) => {
+    if (!searchContainer.contains(e.target)) {
+        searchBar.classList.remove('active');
+    }
+});
+
+// Fermer aussi quand on perd le focus
+searchBar.addEventListener('focusout', () => {
+    setTimeout(() => {
+        searchBar.classList.remove('active');
+    }, 200); // Petit délai pour éviter les conflits
+});
