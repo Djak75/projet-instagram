@@ -31,15 +31,7 @@ themeToggle.addEventListener('change', () => {
         localStorage.setItem('darkMode', 'disabled'); // Enregistrer le mode clair
     }
 });
-
-
-
-
-
-
-
-
-
+s
 
 // script.js
 const searchIcon = document.getElementById('search-icon');
