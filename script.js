@@ -11,50 +11,50 @@
 
 
 
-    // Sélectionner le bouton de commutation et le corps de la page
+    // le bouton de commutation s
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
-// Initialisation : Vérifie le mode enregistré dans le localStorage
+
 if (localStorage.getItem('darkMode') === 'enabled') {
     body.classList.add('dark-mode');
-    themeToggle.checked = true; // Active le bouton de commutation
+    themeToggle.checked = true; // Active le bouton d
 }
 
-// Ajouter un événement au bouton de commutation
+
 themeToggle.addEventListener('change', () => {
     if (themeToggle.checked) {
         body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled'); // Enregistrer le mode sombre
+        localStorage.setItem('darkMode', 'enabled'); // le mode sombre
     } else {
         body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled'); // Enregistrer le mode clair
+        localStorage.setItem('darkMode', 'disabled'); // le mode clair
     }
 });
-s
 
-// script.js
+
+
 const searchIcon = document.getElementById('search-icon');
 const searchBar = document.getElementById('search-bar');
 const searchContainer = document.getElementById('search-container');
 
-// Ouvrir la barre quand on clique sur l'icône
+
 searchIcon.addEventListener('click', (e) => {
-    e.stopPropagation(); // Empêche le clic de se propager
+    e.stopPropagation(); // 
     searchBar.classList.add('active');
-    searchBar.focus(); // Met le focus directement sur l'input
+    searchBar.focus(); 
 });
 
-// Fermer la barre quand on clique ailleurs
+
 document.addEventListener('click', (e) => {
     if (!searchContainer.contains(e.target)) {
         searchBar.classList.remove('active');
     }
 });
 
-// Fermer aussi quand on perd le focus
+
 searchBar.addEventListener('focusout', () => {
     setTimeout(() => {
         searchBar.classList.remove('active');
-    }, 200); // Petit délai pour éviter les conflits
+    }, 200); 
 });
